@@ -1,0 +1,54 @@
+   Compiling embedded-recruitment-task v0.1.0 (/home/youssef/WS/recruitment-task-0.0.1/embedded-recruitment-task)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.42s
+     Running unittests src/lib.rs (target/debug/deps/embedded_recruitment_task-368420813b69a71a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/client.rs (target/debug/deps/client-9003c0d64e8ed9f1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/client_test.rs (target/debug/deps/client_test-9ebf43db07a61605)
+
+running 1 test
+Connecting to localhost:46067
+Connected to the server!
+[2024-12-21T17:49:29Z INFO  client_test] Client connected to the server
+Sent message: EchoMessage(EchoMessage { content: "Hello, World!" })
+[2024-12-21T17:49:29Z INFO  client_test] Sent EchoMessage: Hello, World!
+[2024-12-21T17:49:29Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:49:29Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:46067 with 4 worker threads
+[2024-12-21T17:49:29Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:50894
+[2024-12-21T17:49:29Z INFO  embedded_recruitment_task::server] Received echo request: Hello, World!
+[2024-12-21T17:49:29Z INFO  client_test::client] Received 17 bytes from the server
+[2024-12-21T17:49:29Z INFO  client_test] Received EchoMessage: Hello, World!
+Sent message: EchoMessage(EchoMessage { content: "How are you?" })
+[2024-12-21T17:49:29Z INFO  client_test] Sent EchoMessage: How are you?
+[2024-12-21T17:49:29Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:49:29Z INFO  embedded_recruitment_task::server] Received echo request: How are you?
+[2024-12-21T17:49:29Z INFO  client_test::client] Received 16 bytes from the server
+[2024-12-21T17:49:29Z INFO  client_test] Received EchoMessage: How are you?
+Sent message: EchoMessage(EchoMessage { content: "Goodbye!" })
+[2024-12-21T17:49:29Z INFO  client_test] Sent EchoMessage: Goodbye!
+[2024-12-21T17:49:29Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:49:29Z INFO  embedded_recruitment_task::server] Received echo request: Goodbye!
+[2024-12-21T17:49:29Z INFO  client_test::client] Received 12 bytes from the server
+[2024-12-21T17:49:29Z INFO  client_test] Received EchoMessage: Goodbye!
+Disconnected from the server!
+[2024-12-21T17:49:29Z INFO  client_test] Client disconnected from the server
+[2024-12-21T17:49:29Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:49:29Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:49:30Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:49:31Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:49:31Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:50894
+[2024-12-21T17:49:31Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:49:31Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+[2024-12-21T17:49:31Z INFO  client_test] Server stopped successfully
+test test_multiple_echo_messages ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 7 filtered out; finished in 2.02s
+

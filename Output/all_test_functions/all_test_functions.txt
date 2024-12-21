@@ -1,0 +1,824 @@
+   Compiling embedded-recruitment-task v0.1.0 (/home/youssef/WS/recruitment-task-0.0.1/embedded-recruitment-task)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.39s
+     Running unittests src/lib.rs (target/debug/deps/embedded_recruitment_task-368420813b69a71a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/client.rs (target/debug/deps/client-9003c0d64e8ed9f1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/client_test.rs (target/debug/deps/client_test-9ebf43db07a61605)
+
+running 8 tests
+Connecting to localhost:35377
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "Test abrupt disconnect" })
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:35377 with 4 worker threads
+Connecting to localhost:41109
+Connected to the server!
+[2024-12-21T17:51:37Z INFO  client_test] Client connected to the server
+Sent message: AddRequest(AddRequest { a: 10, b: 20 })
+[2024-12-21T17:51:37Z INFO  client_test] Sent AddRequest: a=10, b=20
+[2024-12-21T17:51:37Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:50218
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:41109 with 4 worker threads
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Received echo request: Test abrupt disconnect
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:59660
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Received add request: 10 + 20
+[2024-12-21T17:51:37Z INFO  client_test::client] Received 4 bytes from the server
+[2024-12-21T17:51:37Z INFO  client_test] Received AddResponse: result=30
+Disconnected from the server!
+[2024-12-21T17:51:37Z INFO  client_test] Client disconnected from the server
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:59660
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+[2024-12-21T17:51:37Z INFO  client_test] Server stopped successfully
+test test_client_add_request ... ok
+Connecting to localhost:40763
+Connected to the server!
+[2024-12-21T17:51:37Z INFO  client_test] Client connected to the server
+Disconnected from the server!
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:40763 with 4 worker threads
+[2024-12-21T17:51:37Z INFO  client_test] Client disconnected from the server
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:56586
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:56586
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+test test_client_connection ... ok
+Connecting to localhost:35147
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:35147 with 4 worker threads
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "Hello, World!" })
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:36848
+[2024-12-21T17:51:37Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Received echo request: Hello, World!
+[2024-12-21T17:51:37Z INFO  client_test::client] Received 17 bytes from the server
+[2024-12-21T17:51:37Z INFO  client_test] Received EchoMessage: Hello, World!
+Disconnected from the server!
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:37Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:51:38Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:51:38Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:39Z ERROR embedded_recruitment_task::server] Error shutting down client connection: Transport endpoint is not connected (os error 107)
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:50218
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+[2024-12-21T17:51:39Z INFO  client_test] Server stopped successfully
+test test_abrupt_client_disconnect ... ok
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connected to the server!
+Connecting to localhost:41313
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:41313 with 4 worker threads
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53870
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53882
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAA
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 64 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 14 bytes from the server
+Disconnected from the server!
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+Connecting to localhost:41313
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+Connected to the server!
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connected to the server!
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connecting to localhost:41313
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" })
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53896
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53908
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53922
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53924
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53926
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53928
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53940
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:36848
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 54 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+test test_client_echo_message ... ok
+Connecting to localhost:37433
+Connected to the server!
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 connected to the server
+Connecting to localhost:37433
+Connected to the server!
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 connected to the server
+Connecting to localhost:37433
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 44 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53952
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53954
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53970
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53986
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:53992
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54006
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54008
+Connected to the server!
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54024
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54038
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54054
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54052
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54068
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54072
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54074
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54084
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54100
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54102
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54110
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54124
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54130
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54136
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54144
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54156
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54164
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 connected to the server
+Sent message: EchoMessage(EchoMessage { content: "Hello, World!" })
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:37433 with 4 worker threads
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 sent EchoMessage: Hello, World!
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54166
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54180
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:49090
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54184
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:49096
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54192
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:49102
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54208
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54220
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54232
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54246
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54256
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54266
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54280
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54290
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54302
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54316
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54322
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54334
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:54348
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: Hello, World!
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 17 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 received EchoMessage: Hello, World!
+Sent message: EchoMessage(EchoMessage { content: "Hello, World!" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 sent EchoMessage: Hello, World!
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: Hello, World!
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 17 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 received EchoMessage: Hello, World!
+Sent message: EchoMessage(EchoMessage { content: "Hello, World!" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 sent EchoMessage: Hello, World!
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: Hello, World!
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 17 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 received EchoMessage: Hello, World!
+Sent message: EchoMessage(EchoMessage { content: "How are you?" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 sent EchoMessage: How are you?
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: How are you?
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 16 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 received EchoMessage: How are you?
+Sent message: EchoMessage(EchoMessage { content: "How are you?" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 sent EchoMessage: How are you?
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: How are you?
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 16 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 received EchoMessage: How are you?
+Sent message: EchoMessage(EchoMessage { content: "How are you?" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 sent EchoMessage: How are you?
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: How are you?
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 16 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 received EchoMessage: How are you?
+Sent message: EchoMessage(EchoMessage { content: "Goodbye!" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 sent EchoMessage: Goodbye!
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: Goodbye!
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 12 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 received EchoMessage: Goodbye!
+Sent message: EchoMessage(EchoMessage { content: "Goodbye!" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 sent EchoMessage: Goodbye!
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: Goodbye!
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 12 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 received EchoMessage: Goodbye!
+Sent message: EchoMessage(EchoMessage { content: "Goodbye!" })
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 sent EchoMessage: Goodbye!
+[2024-12-21T17:51:39Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Received echo request: Goodbye!
+[2024-12-21T17:51:39Z INFO  client_test::client] Received 12 bytes from the server
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 received EchoMessage: Goodbye!
+Disconnected from the server!
+[2024-12-21T17:51:39Z INFO  client_test] Client 1 disconnected from the server
+Disconnected from the server!
+[2024-12-21T17:51:39Z INFO  client_test] Client 2 disconnected from the server
+Disconnected from the server!
+[2024-12-21T17:51:39Z INFO  client_test] Client 3 disconnected from the server
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:49102
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:49096
+[2024-12-21T17:51:39Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53882
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 34 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53870
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 24 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53896
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 74 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53908
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 246 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:49090
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+[2024-12-21T17:51:41Z INFO  client_test] Server stopped successfully
+test test_multiple_clients ... ok
+Connecting to localhost:45515
+Connected to the server!
+[2024-12-21T17:51:41Z INFO  client_test] Client connected to the server
+Sent message: EchoMessage(EchoMessage { content: "Hello, World!" })
+[2024-12-21T17:51:41Z INFO  client_test] Sent EchoMessage: Hello, World!
+[2024-12-21T17:51:41Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:45515 with 4 worker threads
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:51272
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: Hello, World!
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 17 bytes from the server
+[2024-12-21T17:51:41Z INFO  client_test] Received EchoMessage: Hello, World!
+Sent message: EchoMessage(EchoMessage { content: "How are you?" })
+[2024-12-21T17:51:41Z INFO  client_test] Sent EchoMessage: How are you?
+[2024-12-21T17:51:41Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: How are you?
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 16 bytes from the server
+[2024-12-21T17:51:41Z INFO  client_test] Received EchoMessage: How are you?
+Sent message: EchoMessage(EchoMessage { content: "Goodbye!" })
+[2024-12-21T17:51:41Z INFO  client_test] Sent EchoMessage: Goodbye!
+[2024-12-21T17:51:41Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: Goodbye!
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 12 bytes from the server
+[2024-12-21T17:51:41Z INFO  client_test] Received EchoMessage: Goodbye!
+Disconnected from the server!
+[2024-12-21T17:51:41Z INFO  client_test] Client disconnected from the server
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:51272
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+[2024-12-21T17:51:41Z INFO  client_test] Server stopped successfully
+test test_multiple_echo_messages ... ok
+Connecting to localhost:45283
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "Message from client 1" })
+[2024-12-21T17:51:41Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Server starting on 127.0.0.1:45283 with 4 worker threads
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:46980
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] Received echo request: Message from client 1
+[2024-12-21T17:51:41Z INFO  client_test::client] Received 25 bytes from the server
+Disconnected from the server!
+Connecting to localhost:45283
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "Message from client 2" })
+[2024-12-21T17:51:41Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:41Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:46988
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] Received echo request: Message from client 2
+[2024-12-21T17:51:42Z INFO  client_test::client] Received 25 bytes from the server
+Disconnected from the server!
+Connecting to localhost:45283
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "Message from client 3" })
+[2024-12-21T17:51:42Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:46998
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] Received echo request: Message from client 3
+[2024-12-21T17:51:42Z INFO  client_test::client] Received 25 bytes from the server
+Disconnected from the server!
+Connecting to localhost:45283
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "Message from client 4" })
+[2024-12-21T17:51:42Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:47002
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] Received echo request: Message from client 4
+[2024-12-21T17:51:42Z INFO  client_test::client] Received 25 bytes from the server
+Disconnected from the server!
+Connecting to localhost:45283
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+Connected to the server!
+Sent message: EchoMessage(EchoMessage { content: "Message from client 5" })
+[2024-12-21T17:51:42Z INFO  client_test::client] Receiving message from the server
+[2024-12-21T17:51:42Z INFO  embedded_recruitment_task::server] New client connected: 127.0.0.1:47010
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53922
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:43Z INFO  client_test::client] Received 84 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53924
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:43Z INFO  client_test::client] Received 166 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53926
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:43Z INFO  client_test::client] Received 176 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53928
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:43Z INFO  client_test::client] Received 206 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:46980
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Received echo request: Message from client 5
+[2024-12-21T17:51:43Z INFO  client_test::client] Received 25 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:43Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:51:44Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:44Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:46988
+[2024-12-21T17:51:44Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:44Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:46998
+[2024-12-21T17:51:44Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:44Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:47002
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53952
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:45Z INFO  client_test::client] Received 226 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53940
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:45Z INFO  client_test::client] Received 236 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53954
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:45Z INFO  client_test::client] Received 256 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53970
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:45Z INFO  client_test::client] Received 266 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:47010
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:51:45Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+[2024-12-21T17:51:45Z INFO  client_test] Server stopped successfully
+test test_sequential_clients ... ok
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53986
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:47Z INFO  client_test::client] Received 286 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:53992
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:47Z INFO  client_test::client] Received 186 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54008
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:47Z INFO  client_test::client] Received 196 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54006
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:47Z INFO  client_test::client] Received 296 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:47Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54024
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:49Z INFO  client_test::client] Received 216 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54038
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:49Z INFO  client_test::client] Received 156 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54054
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54052
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:49Z INFO  client_test::client] Received 146 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:49Z INFO  client_test::client] Received 124 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:49Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54068
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:51Z INFO  client_test::client] Received 114 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54072
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:51Z INFO  client_test::client] Received 104 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54074
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:51Z INFO  client_test::client] Received 94 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54084
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:51Z INFO  client_test::client] Received 136 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:51Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54100
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:53Z INFO  client_test::client] Received 306 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54102
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:53Z INFO  client_test::client] Received 316 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54110
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:53Z INFO  client_test::client] Received 456 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54124
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:53Z INFO  client_test::client] Received 466 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:53Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54136
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54130
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:55Z INFO  client_test::client] Received 326 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:55Z INFO  client_test::client] Received 336 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54144
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:55Z INFO  client_test::client] Received 496 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54156
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:55Z INFO  client_test::client] Received 346 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:55Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54164
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54166
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:57Z INFO  client_test::client] Received 276 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:57Z INFO  client_test::client] Received 486 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54184
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:57Z INFO  client_test::client] Received 356 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54180
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:57Z INFO  client_test::client] Received 476 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:57Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54192
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:59Z INFO  client_test::client] Received 366 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54208
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:59Z INFO  client_test::client] Received 376 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54220
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:59Z INFO  client_test::client] Received 386 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54232
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:51:59Z INFO  client_test::client] Received 506 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:51:59Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54246
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:52:01Z INFO  client_test::client] Received 406 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54256
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:52:01Z INFO  client_test::client] Received 446 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54280
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:52:01Z INFO  client_test::client] Received 426 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54266
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:52:01Z INFO  client_test::client] Received 416 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:52:01Z INFO  embedded_recruitment_task::server] No data received. Waiting before closing the connection.
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54290
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:52:03Z INFO  client_test::client] Received 436 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54302
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Received echo request: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[2024-12-21T17:52:03Z INFO  client_test::client] Received 396 bytes from the server
+Disconnected from the server!
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Initiating server shutdown...
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54348
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54334
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Main server loop ending, waiting for thread pool to complete...
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54316
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client disconnected after waiting.
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Client handler thread finished for 127.0.0.1:54322
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] All client threads finished
+[2024-12-21T17:52:03Z INFO  embedded_recruitment_task::server] Server shutdown completed successfully
+[2024-12-21T17:52:03Z INFO  client_test] Server stopped successfully
+test test_high_load_with_varying_message_sizes ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 26.17s
+
+   Doc-tests embedded_recruitment_task
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
