@@ -112,4 +112,14 @@ impl Client {
             ))
         }
     }
+
+    // Method to shutdown the client connection (used in the test_abrupt_client_disconnect function)
+    pub fn shutdown(&mut self) -> std::io::Result<()> {
+        if let Some(ref stream) = self.stream {
+            stream.shutdown(std::net::Shutdown::Both)
+        } else {
+            Ok(())
+        } 
+    }
+
 }
